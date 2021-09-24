@@ -52,10 +52,10 @@ public class P2_1_BinCropConfirmation extends Page
         } );
 
         // New Code (9/21)
-        Button fuck = new Button();
-        fuck.setPrefWidth( 100 );
-        fuck.setText( "Fuck" );
-        fuck.setOnAction( e ->{
+        Button inverted = new Button();
+        inverted.setPrefWidth( 100 );
+        inverted.setText( "Image is inverted" );
+        inverted.setOnAction( e ->{
             MazeGUI.setMaze( Maze.generate(
                     new Image(Image.invert(
                             MazeGUI.getMaze().getSource().getMat())),
@@ -75,7 +75,7 @@ public class P2_1_BinCropConfirmation extends Page
 
         HBox hb = new HBox( 2 );
         hb.setAlignment( Pos.CENTER );
-        hb.getChildren().addAll( y, n, fuck );
+        hb.getChildren().addAll( y, n, inverted );
 
         VBox vb = new VBox( 2 );
         vb.setAlignment( Pos.CENTER );
